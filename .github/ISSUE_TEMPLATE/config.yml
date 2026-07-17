@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Ask a question / discuss
+    url: https://github.com/paradox-kush/tuvora/discussions
+    about: Questions, feedback, and general chat live in Discussions — not Issues.
+  - name: 📖 Setup guides (M3U, Xtream, Stalker, navigation)
+    url: https://paradox-kush.github.io/tuvora-site/guides.html
+    about: How to add your playlist and get around the app.
+  - name: 📥 Install the beta
+    url: https://groups.google.com/g/tuvora-testers
+    about: Join the tester group, then open the Play opt-in link for your device.

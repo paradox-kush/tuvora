@@ -1,0 +1,25 @@
+name: 💡 Feature request / idea
+description: Suggest an improvement or a new feature
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem or gap?
+      description: What are you trying to do that's hard or impossible in Tuvora today?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like Tuvora to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options:
+        - Phone / tablet
+        - Android TV
+        - Both

@@ -1,0 +1,59 @@
+name: 📺 Playlist / source won't work
+description: An M3U, Xtream, or Stalker source won't add, shows nothing, or won't play
+labels: ["source-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Never paste your full server URL, username, or password.** Redact them (e.g. `http://REDACTED:8080`, user `REDACTED`).
+        A quick sanity check first: does the **same** playlist work in another player (VLC, TiviMate)? That tells us if it's Tuvora or the provider.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Source type
+      options:
+        - M3U — URL
+        - M3U — file
+        - Xtream Codes
+        - Stalker portal
+    validations:
+      required: true
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: What happens?
+      options:
+        - Won't add / error when I save it
+        - Adds, but shows no channels / movies / series
+        - Shows content, but nothing plays
+        - Plays, but keeps buffering or stopping
+        - Wrong or missing EPG / guide
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: App & version
+      placeholder: e.g. Tuvora TV 1.3.16
+    validations:
+      required: true
+  - type: dropdown
+    id: otherplayer
+    attributes:
+      label: Does the same source work in another player (VLC, TiviMate…)?
+      options:
+        - "Yes — works elsewhere"
+        - "No — fails there too"
+        - "Haven't tried"
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Exact error message, if any (redact credentials)
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Country, provider type, screenshots (blur the host first), etc.

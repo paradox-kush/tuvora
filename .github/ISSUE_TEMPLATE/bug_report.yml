@@ -1,0 +1,55 @@
+name: 🐞 Bug report
+description: Something in Tuvora is broken or behaving wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Tuvora!
+        🔒 **Please redact any provider URL, username, or password** before posting (e.g. `http://REDACTED:8080`).
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which app?
+      options:
+        - Phone / tablet (Tuvora)
+        - Android TV / Google TV (Tuvora TV)
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Find it in Settings → About (e.g. 1.3.18)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device & Android version
+      placeholder: e.g. Pixel 7 / Android 14  —  or  Onn 4K / Android 12
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Tap …
+        3. See …
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or a short screen recording (optional)
+      description: Drag files here. Blur any provider host / credentials first.
